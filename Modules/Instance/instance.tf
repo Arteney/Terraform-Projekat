@@ -16,7 +16,7 @@ variable "PATH_TO_PUBLIC_KEY" {
 }
 
 resource "aws_instance" "instance" {
-  ami           = "ami-0119aa4d67e59007c"
+  ami           = "ami-090fa75af13c156b4"
   instance_type = var.INSTANCE_TYPE
   user_data = <<EOF
 #!/bin/bash
