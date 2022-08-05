@@ -11,13 +11,11 @@ variable "public_subnets" {
 variable "vpc_id" {
 }
 
-variable "PATH_TO_PUBLIC_KEY" {
-  default = "key.pem"
-}
 
 resource "aws_instance" "instance" {
   ami           = "ami-090fa75af13c156b4"
   instance_type = var.INSTANCE_TYPE
+  key_name      = "main-key"
   user_data = <<EOF
 #!/bin/bash
 sudo yum install -y yum-utils
@@ -141,12 +139,6 @@ resource "aws_security_group" "allow-all-outbound" {
     Environmnent = var.ENV
   }
 }
-
-resource "aws_key_pair" "positivetech-key" {
-  key_name   = "PositiveTech-${var.ENV}-key"
-  public_key = file("${path.root}/${var.PATH_TO_PUBLIC_KEY}")
-}
-
 
 output "vpc-security-group-ids" {
   description = "List of IDs of public subnets"
