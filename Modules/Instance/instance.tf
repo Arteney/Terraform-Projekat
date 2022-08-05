@@ -12,7 +12,7 @@ variable "vpc_id" {
 }
 
 variable "PATH_TO_PUBLIC_KEY" {
-  default = "PositiveTech.pem"
+  default = "key.pem"
 }
 
 resource "aws_instance" "instance" {
