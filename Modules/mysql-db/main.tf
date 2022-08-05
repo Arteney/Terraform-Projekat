@@ -8,7 +8,6 @@ resource "aws_db_instance" "default" {
   identifier             = var.identifier
   instance_class         = var.instance-class
   name                   = var.db-name
-  parameter_group_name   = var.parameter-group-name
   password               = var.password
   publicly_accessible    = var.publicly-accessible
   skip_final_snapshot    = true

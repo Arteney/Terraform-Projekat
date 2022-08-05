@@ -25,9 +25,6 @@ variable "instance-class" {
   default = "db.t2.micro"
 }
 
-variable "parameter-group-name" {
-  type    = string
-}
 
 variable "password" {
   type = string
