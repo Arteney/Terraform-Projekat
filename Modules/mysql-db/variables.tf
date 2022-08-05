@@ -27,7 +27,6 @@ variable "instance-class" {
 
 variable "parameter-group-name" {
   type    = string
-  default = "default.mysql8.0.28"
 }
 
 variable "password" {
