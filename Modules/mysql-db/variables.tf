@@ -13,7 +13,7 @@ variable "db-subnet-group-name" {
 
 variable "engine-version" {
   type    = string
-  default = "8.0.29"
+  default = "8.0.28"
 }
 
 variable "identifier" {
@@ -27,7 +27,7 @@ variable "instance-class" {
 
 variable "parameter-group-name" {
   type    = string
-  default = "default.mysql8.0.29"
+  default = "default.mysql8.0.28"
 }
 
 variable "password" {
