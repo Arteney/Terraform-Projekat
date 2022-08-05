@@ -5,7 +5,7 @@ variable "AWS_REGION" {
 }
 
 resource "aws_db_subnet_group" "private" {
-  name       = "positivetech-db-subnet-group-private"
+  name       = "positivetech-db-subnet-group-private-${var.ENV}"
   subnet_ids = [aws_subnet.PositiveTech-subnet-private-1.id, aws_subnet.PositiveTech-subnet-private-2.id]
 
   tags = {
