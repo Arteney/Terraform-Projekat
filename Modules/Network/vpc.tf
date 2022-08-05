@@ -41,7 +41,7 @@ resource "aws_route_table_association" "PositiveTech-subnet-private-1" {
 }
 
 resource "aws_subnet" "PositiveTech-subnet-public" {
-  availability_zone_id = "us-east-1a"
+  availability_zone_id = "use1-az1"
   cidr_block           = "10.0.0.0/24"
   vpc_id               = aws_vpc.main-vpc.id
 
@@ -51,7 +51,7 @@ resource "aws_subnet" "PositiveTech-subnet-public" {
 }
 
 resource "aws_subnet" "PositiveTech-subnet-private-1" {
-  availability_zone_id = "us-east-1a"
+  availability_zone_id = "use1-az1"
   cidr_block           = "10.0.1.0/24"
   vpc_id               = aws_vpc.main-vpc.id
 
@@ -61,7 +61,7 @@ resource "aws_subnet" "PositiveTech-subnet-private-1" {
 }
 
 resource "aws_subnet" "PositiveTech-subnet-private-2" {
-  availability_zone_id = "us-east-1b"
+  availability_zone_id = "use1-az2"
   cidr_block           = "10.0.2.0/24"
   vpc_id               = aws_vpc.main-vpc.id
 
