@@ -15,9 +15,9 @@ module "DB" {
   source = "../Modules/mysql-db"
 
   apply-immediately      = true
-  db-name                = "db-prod"
+  db-name                = "dbProd"
   db-subnet-group-name   = module.main-vpc.db-subnet-group-name
-  identifier             = "db-prod"
+  identifier             = "dbProd"
   password               = var.db-password
   publicly-accessible    = false
   username               = var.db-username
