@@ -1,17 +1,3 @@
-variable "ENV" {
-}
-
-variable "INSTANCE_TYPE" {
-  default = "t2.micro"
-}
-
-variable "public_subnets" {
-}
-
-variable "vpc_id" {
-}
-
-
 resource "aws_instance" "instance" {
   ami           = "ami-090fa75af13c156b4"
   instance_type = var.INSTANCE_TYPE
@@ -140,7 +126,4 @@ resource "aws_security_group" "allow-all-outbound" {
   }
 }
 
-output "vpc-security-group-ids" {
-  description = "List of IDs of public subnets"
-  value       = aws_security_group.allow-internal-mysql.id
-}
+
